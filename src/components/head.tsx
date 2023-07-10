@@ -17,6 +17,9 @@ const Head: React.FC = () => {
             />
             <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
             <title>William Dhenin</title>
+            <meta name="description" content="William Dhenin is a software engineer mainly backend oriented who builds innovative products and great payment solutions." />
+            <meta name="keywords" content="engineer, backend, java, payments" />
+            <meta name="google-site-verification" content="lZL0emSWY_Oon0yv5ikk-0Gc1PZ0pmSqKev7YXtrDbA" />
             <link rel="apple-touch-icon" sizes="180x180" href={faviconapple}/>
             <link rel="icon" type="image/png" sizes="32x32" href={favicon32}/>
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16}/>
