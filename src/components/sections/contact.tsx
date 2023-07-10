@@ -81,17 +81,17 @@ const Contact: React.FC = () => {
                         questions.</p>
                     <StyledIconContact>
                         <div>
-                            <a href="mailto:williamdhenin@gmail.com"><img src={mail} alt=""/></a>
+                            <a href="mailto:williamdhenin@gmail.com"><img src={mail} alt="mail"/></a>
                         </div>
                         <div>
-                            <a href="https://github.com/ninehd" target="_blank"><img src={github} alt=""/></a>
+                            <a href="https://github.com/ninehd" target="_blank"><img src={github} alt="github"/></a>
                         </div>
                         <div>
                             <a href="https://www.linkedin.com/in/williamdhenin/" target="_blank"><img src={linkedin}
-                                                                                                      alt=""/></a>
+                                                                                                      alt="linkedin"/></a>
                         </div>
                         <div>
-                            <a href="https://twitter.com/ninehd09" target="_blank"><img src={twitter} alt=""/></a>
+                            <a href="https://twitter.com/ninehd09" target="_blank"><img src={twitter} alt="twitter"/></a>
                         </div>
                     </StyledIconContact>
                 </div>
