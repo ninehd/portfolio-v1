@@ -279,7 +279,7 @@ const Resume = () => {
                         </div>
                         <hr className="solid"/>
                         <div className="footer">
-                           Sep 2014 - Sep 2017 | Toulouse, France
+                            Sep 2014 - Sep 2017 | Toulouse, France
                         </div>
                     </StyledCard>
                 </StyledResume>

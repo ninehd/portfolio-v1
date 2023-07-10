@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const StyledLoader = styled.div`
   display: flex;
   justify-content: center;
@@ -47,8 +48,6 @@ const StyledRing = styled.div`
       transform: rotate(360deg);
     }
   }`;
-
-
 
 
 const Loader: React.FC = () => {

@@ -37,19 +37,19 @@ const StyledHero = styled.section.attrs({
       font-size: 1.7rem;
     }
   }
-  
+
   @media screen and (min-width: 768px) {
     padding-top: 0;
 
     p {
       font-size: 2rem;
     }
-    
+
     header {
       text-align: left;
       align-self: center;
     }
-    
+
     img {
       display: inline;
     }
@@ -82,7 +82,7 @@ const StyledButton = styled.a`
   text-transform: uppercase;
   transition: background-color 0.3s;
   white-space: nowrap;
-  
+
 
   &:hover {
     background-color: white;

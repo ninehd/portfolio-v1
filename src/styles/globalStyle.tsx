@@ -50,12 +50,12 @@ const GlobalStyle = createGlobalStyle`
     @media screen and (min-width: 600px) {
       font-size: 4rem;
     }
-    
+
     @media screen and (min-width: 992px) {
       font-size: 4.8rem;
     }
   }
-  
+
 
   h4 {
     font-size: 1.5rem;
@@ -136,7 +136,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
   }
-  
+
   .block--skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 7rem);
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 99%);
@@ -149,9 +149,9 @@ const GlobalStyle = createGlobalStyle`
       padding-bottom: calc(var(--padding-vertical) + 10rem);
       clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 95%);
     }
-    
+
   }
-  
+
   .container {
     max-width: 1140px;
     margin: 0 auto;

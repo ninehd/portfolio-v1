@@ -11,7 +11,7 @@ const StyledContact = styled.section.attrs({
 })`
 
   padding-top: 2rem;
-  
+
   header {
     margin-bottom: 2rem;
   }
@@ -25,7 +25,7 @@ const StyledContact = styled.section.attrs({
 
   @media screen and (min-width: 768px) {
     p {
-      font-size: 1.8rem ;
+      font-size: 1.8rem;
     }
   }
 
@@ -77,7 +77,8 @@ const Contact: React.FC = () => {
                     <h3 className="block__heading">{'> find .contacts'}</h3>
                 </header>
                 <div>
-                    <p>Althought, I am not looking for any new opportunities, you can still contact me for any questions.</p>
+                    <p>Althought, I am not looking for any new opportunities, you can still contact me for any
+                        questions.</p>
                     <StyledIconContact>
                         <div>
                             <a href="mailto:williamdhenin@gmail.com"><img src={mail} alt=""/></a>
@@ -86,7 +87,8 @@ const Contact: React.FC = () => {
                             <a href="https://github.com/ninehd" target="_blank"><img src={github} alt=""/></a>
                         </div>
                         <div>
-                            <a href="https://www.linkedin.com/in/williamdhenin/" target="_blank"><img src={linkedin} alt=""/></a>
+                            <a href="https://www.linkedin.com/in/williamdhenin/" target="_blank"><img src={linkedin}
+                                                                                                      alt=""/></a>
                         </div>
                         <div>
                             <a href="https://twitter.com/ninehd09" target="_blank"><img src={twitter} alt=""/></a>
