@@ -24,7 +24,7 @@ const TextPicture = styled.div`
 
   p {
     font-size: 1.9rem;
-    width:  100%;
+    width: 100%;
     margin: 1rem 1rem;
   }
 
@@ -35,7 +35,7 @@ const TextPicture = styled.div`
 
     p {
       padding-top: 2rem;
-      width:  70%;
+      width: 70%;
     }
   }
 `;

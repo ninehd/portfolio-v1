@@ -10,8 +10,8 @@ import {graphql, useStaticQuery} from "gatsby";
 
 const Head = ({title, description, image}: { title?: string, description?: string, image?: string }) => {
 
-    const { pathname} = useLocation();
-    const { site } = useStaticQuery(
+    const {pathname} = useLocation();
+    const {site} = useStaticQuery(
         graphql`
             query {
               site {
@@ -71,7 +71,7 @@ const Head = ({title, description, image}: { title?: string, description?: strin
             <link rel="apple-touch-icon" sizes="180x180" href={faviconapple}/>
             <link rel="icon" type="image/png" sizes="32x32" href={favicon32}/>
             <link rel="icon" type="image/png" sizes="16x16" href={favicon16}/>
-            <link rel="mask-icon" href={faviconSafariSpin} color="#5bbad5"/>
+            <link rel="mask-icon" href={faviconSafariSpin} color="#272935"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
             <link

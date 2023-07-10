@@ -64,8 +64,8 @@ const StyledIconContact = styled.div`
       width: 96px;
     }
   }
-  
-  
+
+
 `;
 
 const Contact: React.FC = () => {
@@ -91,7 +91,8 @@ const Contact: React.FC = () => {
                                                                                                       alt="linkedin"/></a>
                         </div>
                         <div>
-                            <a href="https://twitter.com/ninehd09" target="_blank"><img src={twitter} alt="twitter"/></a>
+                            <a href="https://twitter.com/ninehd09" target="_blank"><img src={twitter}
+                                                                                        alt="twitter"/></a>
                         </div>
                     </StyledIconContact>
                 </div>
