@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, {useEffect, useRef} from 'react';
+import styled, {keyframes} from 'styled-components';
 import java from '../../images/skills/java.png';
 import sql from '../../images/skills/sql.png';
 import c from '../../images/skills/c.png';
@@ -39,6 +39,12 @@ const StyledSkillItem = styled.div`
 
 `;
 
+const progressAnimation = keyframes`
+  from {
+    width: 0;
+  }
+`;
+
 const StyledProgressBar = styled.div`
   padding: 1rem;
   width: 100%;
@@ -53,59 +59,89 @@ const StyledProgressBar = styled.div`
     width: 100%; /* Full width */
   }
 
+  .percentage {
+    display: block;
+    height: 100%;
+    animation: ${progressAnimation} 2s ease-in-out forwards;
+  }
+  
   .java {
     background-color: #2bf5f5;
-    height: 10px;
     width: 85%;
   }
 
   .net {
     background-color: #d51e80;
-    height: 10px;
-    width: 70%;
+    width: 80%;
   }
 
   .sql {
     background-color: #e5d627;
-    height: 10px;
     width: 80%;
   }
 
   .html {
     background-color: #0f7bc7;
-    height: 10px;
     width: 90%;
   }
 
   .css {
     background-color: #e14124;
-    height: 10px;
     width: 70%;
   }
 
   .js {
     background-color: #f3952b;
-    height: 10px;
     width: 80%;
   }
 
   .docker {
     background-color: #71d22f;
-    height: 10px;
     width: 65%;
   }
 
   .jenkins {
     background-color: #ffffff;
-    height: 10px;
     width: 60%;
   }
 `;
 
 const Skills = () => {
+    const skillsRef = useRef(null);
 
+    useEffect(() => {
+        const skillsSection = skillsRef.current;
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.4 // Trigger animation when 50% of the section is visible
+        };
+
+        const handleIntersection: IntersectionObserverCallback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const progressBarSpans = entry.target.querySelectorAll('span');
+                    progressBarSpans.forEach((span) => {
+                        span.classList.add('percentage');
+                    });
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, options);
+
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        return () => {
+            if (skillsSection) {
+                observer.unobserve(skillsSection);
+            }
+        };
+    }, []);
     return (
-        <StyledSkillsSection>
+        <StyledSkillsSection ref={skillsRef}>
             <div className="container">
                 <header>
                     <h3 className="block__heading">{'> ls -a skills'}</h3>
@@ -116,7 +152,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>Java</h4></header>
                             <div className="progress-bar">
-                                <div className="java"></div>
+                                <span className="java"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -125,7 +161,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>C#</h4></header>
                             <div>
-                                <div className="net"></div>
+                                <span className="net"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -134,7 +170,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>SQL</h4></header>
                             <div>
-                                <div className="sql"></div>
+                                <span className="sql"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -143,7 +179,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>HTML</h4></header>
                             <div>
-                                <div className="html"></div>
+                                <span className="html"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -152,7 +188,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>CSS</h4></header>
                             <div>
-                                <div className="css"></div>
+                                <span className="css"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -161,7 +197,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>JavaScript</h4></header>
                             <div>
-                                <div className="js"></div>
+                                <span className="js"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -170,7 +206,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>Docker</h4></header>
                             <div>
-                                <div className="docker"></div>
+                                <span className="docker"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
@@ -179,7 +215,7 @@ const Skills = () => {
                         <StyledProgressBar>
                             <header><h4>Jenkins</h4></header>
                             <div>
-                                <div className="jenkins"></div>
+                                <span className="jenkins"></span>
                             </div>
                         </StyledProgressBar>
                     </StyledSkillItem>
