@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
         <StyledContact>
             <div className="container">
                 <header>
-                    <h3 className="block__heading">{'> find .contacts'}</h3>
+                    <h3 className="block__heading">{'> '}<span className="cmd">find</span>{' .contacts'}</h3>
                 </header>
                 <div>
                     <p>Althought, I am not looking for any new opportunities, you can still contact me for any

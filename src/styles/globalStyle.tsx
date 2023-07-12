@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   ${variables}
 
   ;
+
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -113,7 +114,7 @@ const GlobalStyle = createGlobalStyle`
 
   .block--dark {
     background: var(--color-primary);
-    text-shadow: #FFFFFF 0 0 0.3em;
+    text-shadow: #FFFFFF 0 0 0.3rem;
     color: white;
   }
 
@@ -158,7 +159,15 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .white {
-    filter: brightness(0) invert(1) drop-shadow(0px 0px 3px #FFFFFF);
+    filter: brightness(0) invert(1) drop-shadow(0px 0px 0.2em #FFFFFF);
+  }
+
+  .cmd {
+    color: var(--color-tertiary);
+  }
+
+  .block--dark .cmd {
+    text-shadow: var(--color-tertiary) 0 0 0.3rem;
   }
 `;
 

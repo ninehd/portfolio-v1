@@ -10,7 +10,6 @@ const StyledNav = styled.nav`
   flex-wrap: wrap;
   padding: 1rem;
   align-items: center;
-  text-shadow: #FFFFFF 0 0 0.5em;
 
   > a {
     transform: translateY(5px);
@@ -69,6 +68,10 @@ const StyledLi = styled.li`
     &:hover {
       color: #d2d0db;
     }
+
+    > span {
+      color: var(--color-tertiary);
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -91,16 +94,16 @@ const Header: React.FC = () => {
             <StyledImg className="white" src={menu} alt=""/>
             <StyledUl className="list" isExpanded={isExpanded}>
                 <StyledLi>
-                    <a href="#about">01. About</a>
+                    <a href="#about"><span>01.</span> About</a>
                 </StyledLi>
                 <StyledLi>
-                    <a href="#experience">02. Experiences</a>
+                    <a href="#experience"><span>02.</span> Experiences</a>
                 </StyledLi>
                 <StyledLi>
-                    <a href="#skill">03. Skills</a>
+                    <a href="#skill"><span>03.</span> Skills</a>
                 </StyledLi>
                 <StyledLi>
-                    <a href="#contact">04. Contact</a>
+                    <a href="#contact"><span>04.</span> Contact</a>
                 </StyledLi>
             </StyledUl>
         </StyledNav>

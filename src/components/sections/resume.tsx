@@ -26,7 +26,7 @@ const StyledCompany = styled.div`
 const StyledCard = styled.div`
   border-radius: 7px;
   border: solid white 2px;
-  box-shadow: 0 0 5px 2px white;
+  box-shadow: 0 0 0.3rem 0.2rem white;
   margin: 1.5rem 1rem;
   width: 90%;
 
@@ -125,7 +125,7 @@ const Resume = () => {
         <section id="experience" className="block block--dark block--skewed-right">
             <div className="container">
                 <header>
-                    <h3 className="block__heading">{'> cat experience.txt'}</h3>
+                    <h3 className="block__heading">{'> '}<span className="cmd">cat</span>{' experience.txt'}</h3>
                 </header>
                 <StyledResume>
                     <StyledCard>

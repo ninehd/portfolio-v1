@@ -64,7 +64,7 @@ const StyledProgressBar = styled.div`
     height: 100%;
     animation: ${progressAnimation} 2s ease-in-out forwards;
   }
-  
+
   .java {
     background-color: #2bf5f5;
     width: 85%;
@@ -144,7 +144,7 @@ const Skills = () => {
         <StyledSkillsSection ref={skillsRef}>
             <div className="container">
                 <header>
-                    <h3 className="block__heading">{'> ls -a skills'}</h3>
+                    <h3 className="block__heading">{'> '}<span className="cmd">ls</span>{' -a skills'}</h3>
                 </header>
                 <div>
                     <StyledSkillItem>

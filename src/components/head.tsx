@@ -68,10 +68,6 @@ const Head = ({title, description, image}: { title?: string, description?: strin
             <meta name="twitter:creator" content={seo.twitterUsername}/>
             <meta name="keywords" content="engineer, backend, java, payments"/>
             <meta name="google-site-verification" content="lZL0emSWY_Oon0yv5ikk-0Gc1PZ0pmSqKev7YXtrDbA"/>
-            <link rel="apple-touch-icon" sizes="180x180" href={faviconapple}/>
-            <link rel="icon" type="image/png" sizes="32x32" href={favicon32}/>
-            <link rel="icon" type="image/png" sizes="16x16" href={favicon16}/>
-            <link rel="mask-icon" href={faviconSafariSpin} color="#272935"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
             <link

@@ -46,7 +46,7 @@ const About = () => {
         <div id="about" className="block">
             <div className="container">
                 <header>
-                    <h3 className="block__heading">{'> echo ${about_me}'}</h3>
+                    <h3 className="block__heading">{'> '}<span className="cmd">echo</span>{' ${about_me}'}</h3>
                 </header>
                 <TextPicture>
                     <img className="lamp" src={lamp} alt=""/>
