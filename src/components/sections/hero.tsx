@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import computer from "../../images/computer.svg";
 import resume from "../../assets/resume.pdf"
@@ -237,57 +237,47 @@ const StyledTypeWriter = styled.div`
     }
   }
 
-  --caret: currentcolor;
 
+  color: var(--color-tertiary);
+  text-shadow: var(--color-tertiary) 0 0 0.3rem;
 
   &:before {
-    content: "> Hello world \\A > I'm William Dhenin ";
-    white-space: pre-wrap;
     animation: typing 5s;
+    color: white;
+    content: "> Hello world \\A > I'm ";
+    text-shadow: white 0 0 0.3rem;
+    white-space: pre-wrap;
   }
 
   &:after {
-    content: "";
-    border-right: 1px solid var(--caret);
     animation: blink 0.65s linear infinite;
-  }
-
-
-  @media (prefers-reduced-motion) {
-    &:after {
-      animation: none;
-    }
-
-    @keyframes sequencePopup {
-      0%, 100% {
-        content: "developer";
-      }
-      25% {
-        content: "writer";
-      }
-      50% {
-        content: "reader";
-      }
-      75% {
-        content: "human";
-      }
-    }
-
-    &:before {
-      content: "developer";
-      animation: sequencePopup 12s linear infinite;
-    }
+    border-right: 1px solid white;
+    color: white;
+    content: "";
+    text-shadow: white 0 0 0.3rem;
   }
 `;
 
 const Hero = () => {
+    const [name, setName] = useState('');
+
+    // Hack to highlight William Dhenin green like it was command
+    useEffect(() => {
+        const typingAnimationEnd = () => {
+            setName("William Dhenin\u00A0");
+        };
+
+        const typingAnimationDuration = 5000;
+        const typingAnimationTimeout = setTimeout(typingAnimationEnd, typingAnimationDuration);
+        return () => clearTimeout(typingAnimationTimeout);
+    }, []);
 
     return (
         <StyledHero>
             <StyledHeroGrid>
                 <header>
                     <h2 className="block__heading">
-                        <StyledTypeWriter></StyledTypeWriter>
+                        <StyledTypeWriter>{name}</StyledTypeWriter>
                     </h2>
                     <p>I am a software engineer mainly backend oriented.
                         Currently, I am focused on building great payment solutions at Lyra Network.</p>
