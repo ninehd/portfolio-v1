@@ -7,8 +7,8 @@ const StyledFooter = styled.footer.attrs({
 })`
   text-align: center;
   padding-bottom: 1rem;
-  
-  p{
+
+  p {
     margin: 0;
     font-size: 1.5rem;
   }

@@ -1,5 +1,4 @@
 import React, {ReactNode, useEffect, useState} from "react";
-import Head from "./head";
 import GlobalStyle from "../styles/globalStyle";
 import Footer from "./footer";
 import Nav from "./nav";
@@ -28,13 +27,12 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
     }
 
     return (
-        <div>
-            <Head/>
+        <>
             <GlobalStyle/>
             <Nav/>
             <main>{children}</main>
             <Footer/>
-        </div>
+        </>
     );
 };
 

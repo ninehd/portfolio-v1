@@ -1,10 +1,6 @@
 import * as React from "react"
-import Layout from "../components/layout";
-import Hero from "../components/sections/hero";
-import About from "../components/sections/about";
-import Skills from "../components/sections/skills";
-import Resume from "../components/sections/resume";
-import Contact from "../components/sections/contact";
+import {HeadFC} from "gatsby";
+import {About, Contact, Hero, Layout, Resume, Seo, Skills} from '../components';
 
 const IndexPage = () => (
     <Layout>
@@ -16,3 +12,4 @@ const IndexPage = () => (
     </Layout>
 );
 export default IndexPage
+export const Head: HeadFC = () => <Seo/>

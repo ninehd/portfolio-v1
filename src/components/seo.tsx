@@ -1,14 +1,9 @@
 import React from "react";
-import {Helmet} from "react-helmet";
-import favicon32 from "../images/favicon/favicon-32x32.png";
-import favicon16 from "../images/favicon/favicon-16x16.png";
-import faviconapple from "../images/favicon/favicon-16x16.png";
-import faviconSafariSpin from "../images/favicon/safari-pinned-tab.svg";
 import {useLocation} from '@reach/router';
 import {graphql, useStaticQuery} from "gatsby";
 
 
-const Head = ({title, description, image}: { title?: string, description?: string, image?: string }) => {
+const Seo = ({title, description, image}: { title?: string, description?: string, image?: string }) => {
 
     const {pathname} = useLocation();
     const {site} = useStaticQuery(
@@ -44,7 +39,7 @@ const Head = ({title, description, image}: { title?: string, description?: strin
     }
 
     return (
-        <Helmet>
+        <>
             <html lang="en"/>
             <meta charSet="UTF-8"/>
             <meta
@@ -74,8 +69,8 @@ const Head = ({title, description, image}: { title?: string, description?: strin
                 href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,300&display=swap"
                 rel="stylesheet"
             />
-        </Helmet>
+        </>
     );
 };
 
-export default Head;
+export default Seo;

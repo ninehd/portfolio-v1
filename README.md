@@ -12,8 +12,8 @@
 
 I developed my portfolio using Gatsby.js, a framework based on React.js.
 <br />The website is deployed on Netlify.
-<br />I chose to build this portfolio as a way to enhance my skills in React.js (TypeScript) and gain practical experience with front end development.
-
+<br />I chose to build this portfolio as a way to enhance my skills in React.js (TypeScript) and gain practical
+experience with front end development.
 
 ## 🚀 Quick start
 
