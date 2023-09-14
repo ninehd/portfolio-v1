@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import mail from "../../images/contact/mail.png";
 import github from "../../images/contact/github.png";
 import linkedin from "../../images/contact/linkedin.png";
-import twitter from "../../images/contact/twitter.png";
+import medium from "../../images/contact/medium.png";
 
 const StyledContact = styled.section.attrs({
     id: 'contact',
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
                                                                                                       alt="linkedin"/></a>
                         </div>
                         <div>
-                            <a href="https://twitter.com/ninehd09" target="_blank"><img src={twitter}
+                            <a href="https://medium.com/@ninehd" target="_blank"><img src={medium}
                                                                                         alt="twitter"/></a>
                         </div>
                     </StyledIconContact>
